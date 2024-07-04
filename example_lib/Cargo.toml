@@ -1,0 +1,22 @@
+[package]
+name = "example_lib"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[lib]
+name = "example_lib"
+crate-type = ["cdylib"]
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[profile.release]
+opt-level = 0
+# opt-level = "z"
+#lto = "fat"
+lto = false
+panic = "abort"
+codegen-units = 1

@@ -1,0 +1,3 @@
+# cbindgen.toml
+language = "C"
+include_guard = "EXAMPLE_LIB_H"
