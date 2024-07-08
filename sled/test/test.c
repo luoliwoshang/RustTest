@@ -4,8 +4,11 @@
 #include "sled.h"
 int main()
 {
+    // void *config = NULL;
     printf("Creating config...\n");
+
     void *config = sled_create_config();
+
     printf("Config created: %p\n", config);
     if (config == NULL)
     {
@@ -32,6 +35,9 @@ int main()
     }
 
     printf("Opening database...\n");
+
+    // free(config); mock error
+
     void *db = sled_open_db(config);
     printf("Database opened: %p\n", db);
     if (db == NULL)
@@ -83,10 +89,5 @@ int main()
     printf("Closing database...\n");
     sled_close(db);
     printf("Database closed\n");
-
-    printf("Freeing config...\n");
-    sled_free_config(config);
-    printf("Config freed\n");
-
     return 0;
 }

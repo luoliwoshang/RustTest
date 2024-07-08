@@ -40,7 +40,6 @@ no_zstd = []
 miri_optimizations = []
 mutex = []
 memshred = []
-capi=[]
 
 [dependencies]
 libc = "0.2.96"
@@ -69,3 +68,6 @@ byteorder = "1.4.3"
 name = "test_crash_recovery"
 path = "tests/test_crash_recovery.rs"
 harness = false
+
+# [lib]
+# crate-type = ["dylib"]

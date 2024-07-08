@@ -37,6 +37,9 @@ typedef struct SledDb SledDb;
  */
 SledConfig *sled_create_config(void);
 
+// config::new();
+// SledConfig *_ZN4sled6config6Config3new17h0de88034b2476d67E();
+
 /**
  * Destroy a configuration.
  */
